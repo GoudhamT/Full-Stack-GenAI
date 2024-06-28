@@ -1,0 +1,71 @@
+"ORDER_ID";"CUSTOMER_ID";"ORDER_DATE";"ORDER_STATUS";"PAYMENT_MODE";"PAYMENT_DATE";"ORDER_SHIPMENT_DATE";"SHIPPER_ID"
+10001;1;"";"Shipped";"Credit Card";"";"";50001
+10002;2;"";"Shipped";"Cash";"";"";50001
+10003;5;"";"Shipped";"Cash";"";"";50001
+10004;5;"";"Shipped";"Credit Card";"";"";50001
+10005;5;"";"In process";"Credit Card";"";"";50002
+10006;6;"";"Shipped";"Net Banking";"";"";50003
+10007;3;"";"Shipped";"Cash";"";"";50004
+10008;7;"";"Shipped";"Credit Card";"";"";50002
+10009;4;"";"Shipped";"Credit Card";"";"";50003
+10010;6;"";"Shipped";"Cash";"";"";50004
+10011;1;"";"Shipped";"Credit Card";"";"";50001
+10012;2;"";"Shipped";"Credit Card";"";"";50004
+10013;8;"";"Cancelled";"";"";"";0
+10014;9;"";"Shipped";"Credit Card";"";"";50005
+10015;10;"";"Shipped";"Credit Card";"";"";50003
+10016;8;"";"Shipped";"Cash";"";"";50004
+10017;6;"";"Shipped";"Cash";"";"";50004
+10018;11;"";"Shipped";"Credit Card";"";"";50001
+10019;12;"";"Shipped";"Credit Card";"";"";50002
+10020;18;"";"In process";"Net Banking";"";"";50003
+10021;25;"";"Shipped";"Credit Card";"";"";50006
+10022;23;"";"Shipped";"Credit Card";"";"";50006
+10023;36;"";"Shipped";"Credit Card";"";"";50002
+10024;32;"";"Shipped";"Net Banking";"";"";50005
+10025;28;"";"Shipped";"Credit Card";"";"";50001
+10026;21;"";"In process";"Net Banking";"";"";0
+10027;23;"";"Shipped";"Credit Card";"";"";50001
+10028;23;"";"In process";"Credit Card";"";"";0
+10029;25;"";"Shipped";"Credit Card";"";"";50003
+10030;52;"";"Shipped";"Credit Card";"";"";50006
+10031;33;"";"Cancelled";"";"";"";0
+10032;7;"";"Shipped";"Credit Card";"";"";50003
+10033;28;"";"Shipped";"Credit Card";"";"";50002
+10034;19;"";"Shipped";"Credit Card";"";"";50001
+10035;24;"";"Shipped";"Net Banking";"";"";50004
+10036;24;"";"Shipped";"Cash";"";"";50001
+10037;2;"";"Shipped";"Cash";"";"";50005
+10038;46;"";"Shipped";"Net Banking";"";"";50005
+10039;14;"";"Shipped";"Net Banking";"";"";50005
+10040;3;"";"Shipped";"Credit Card";"";"";50005
+10041;51;"";"Cancelled";"";"";"";0
+10042;26;"";"Shipped";"Credit Card";"";"";50004
+10043;17;"";"Shipped";"Net Banking";"";"";50002
+10044;39;"";"In process";"Net Banking";"";"";0
+10045;34;"";"In process";"Credit Card";"";"";0
+10046;3;"";"Shipped";"Net Banking";"";"";50002
+10047;24;"";"Shipped";"Net Banking";"";"";50005
+10048;33;"";"Shipped";"Cash";"";"";50002
+10049;33;"";"In process";"Credit Card";"";"";0
+10050;1;"";"In process";"Net Banking";"";"";0
+10051;43;"";"Shipped";"Credit Card";"";"";50006
+10052;17;"";"In process";"";"";"";0
+10053;40;"";"Shipped";"Credit Card";"";"";50005
+10054;19;"";"Shipped";"Credit Card";"";"";50004
+10055;25;"";"Shipped";"Credit Card";"";"";50006
+10056;11;"";"Shipped";"Credit Card";"";"";50004
+10057;11;"";"Shipped";"Cash";"";"";50005
+10058;28;"";"In process";"";"";"";0
+10059;30;"";"Shipped";"Net Banking";"";"";50001
+10060;50;"";"Shipped";"Credit Card";"";"";50005
+10061;37;"";"Shipped";"Credit Card";"";"";50001
+10062;34;"";"Cancelled";"";"";"";0
+10063;18;"";"Shipped";"Credit Card";"";"";50001
+10064;35;"";"Shipped";"Credit Card";"";"";50004
+10065;17;"";"In process";"Net Banking";"";"";0
+10066;41;"";"Cancelled";"";"";"";0
+10067;6;"";"In process";"Credit Card";"";"";0
+10068;51;"";"Shipped";"Credit Card";"";"";50004
+10069;23;"";"Shipped";"Net Banking";"";"";50002
+10070;10;"";"Shipped";"Net Banking";"";"";50001

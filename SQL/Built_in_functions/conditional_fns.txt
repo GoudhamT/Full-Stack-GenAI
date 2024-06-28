@@ -1,0 +1,150 @@
+    
+    ## Date and Time Functions
+    # Current Date
+use orders;
+select current_date();
+    # Current time
+select current_time();
+
+    # Now/Current_timestamp
+select current_timestamp();
+select current_user();
+    # Date
+
+select date('2024-06-15 10:17:13') as Date;
+    # Time
+select time('2024-06-15 10:17:13') as Time;
+    # Year
+select year(customer_creation_date) Inception_Year, count(customer_creation_date) Customers_Aqu from online_customer
+group by Inception_Year
+order by Customers_Aqu desc; 
+
+   # Month
+select monthname(customer_creation_date) Month, count(customer_creation_date) Customers_Aqu from online_customer
+group by Month
+order by Customers_Aqu desc; 
+
+    # Day
+select day(customer_creation_date) as Day from online_customer;
+    # Dayname
+select 
+dayname(customer_creation_date) as Weekday, 
+count(Customer_creation_date) as Customer_Aqu  
+from online_customer
+group by Weekday
+Order by Customer_Aqu desc;
+   
+    # Dateadd
+select 
+Customer_creation_date,
+date_add(customer_creation_date, interval 10 Day) as final_date 
+from Online_customer;
+
+    # Datesub
+Select
+Customer_creation_date,
+date_sub(customer_creation_date, interval 10 Day) as final_date 
+from Online_customer;
+
+	# Datediff
+Select
+Customer_creation_date,
+date_sub(customer_creation_date, interval 10 Day) as final_date,
+datediff(customer_creation_date,date_sub(customer_creation_date, interval 10 Day)) as Inter
+from Online_customer;
+
+Select
+Customer_creation_date,
+date_sub(customer_creation_date, interval 10 Day) as final_date,
+-round(datediff(customer_creation_date,current_date()) / 365, 2) as Inter
+from Online_customer;
+
+select year(current_date());
+
+## Numeric Functions
+    # Abs - Absolute value of a number
+select abs(-44.38) as Modu;
+
+    # Round
+select round(-44.38,1) round_up_number;
+    # Ceiling/Floor
+select ceiling(44.38);
+select floor(44.38);
+    # Sqrt
+select sqrt(100);
+    # Power
+select power(2,3);
+    # Rand
+select round(rand()*10000,0) as Random_num;
+    # Mod
+
+    # Sign
+    # Truncate
+Select truncate(48.936547, 2);
+    # Log 
+
+    # exp
+select exp(2);
+
+## Conditional Functions
+use world;
+    # If
+select 
+country_name,
+if(Population > 25434098,"Above_Ave","Below_Ave") as Pop_Category 
+from country;
+
+select 
+if(Population > 25434098,"Above_Ave","Below_Ave") as Pop_Category,
+count(country_name) as No_of_Countries
+from country
+group by Pop_Category;
+
+select 
+if(Population/SurfaceArea > 650,"Denesly Pop",
+if(Population/SurfaceArea > 450 and Population/SurfaceArea < 650,"Av_Pop","Low_Pop_Density")) as Pop_Den_Cat,
+count(Country_name) as Num
+from country
+group by Pop_Den_Cat 
+order by Pop_Den_Cat desc;
+
+    # Case When Operator
+select Country_name, Case 
+when Population > 25434098 then "Above Average"
+when Population < 25434098 then "Below Average"
+else "Equal to Average"
+end as Pop_Cat
+from country;
+
+select Country_name, Case 
+when Population/SurfaceArea > 650 then "Densely Pop"
+when Population/SurfaceArea < 650 and Population/SurfaceArea > 450 then "Average"
+else "Below Average"
+end as Pop_Cat
+from country;
+
+select * from country;
+
+    # Coalesce
+use orders;
+select Order_Id, Payment_mode, Coalesce(Payment_mode,"Not Available") new_payment_mode from order_header
+where Payment_mode is null;
+
+use orders;
+
+select * from Country;
+select order_id,Payment_mode,Coalesce(Payment_mode,"Not Available") new_payment_mode 
+from order_header where Payment_mode is null;
+
+select order_id, payment_mode, coalesce(payment_mode, 'Not avaliable ') new_payment_mode from order_header where payment_mode is null;
+
+	## Nullif
+Select Payment_mode,nullif(payment_mode,"Credit Card") from order_header;
+	## IfNull
+select Order_date, ifnull(order_date,"NA") from order_header;
+select payment_mode, ifnull(payment_mode,"NA") as NPM from order_header;
+select Order_date, ifnull(Order_date,"NA") as NOD from order_header;
+    
+select order_id,Payment_mode,Coalesce(Payment_mode,"Not Available") new_payment_mode from order_header where Payment_mode is null;
+
+## Window Functions
