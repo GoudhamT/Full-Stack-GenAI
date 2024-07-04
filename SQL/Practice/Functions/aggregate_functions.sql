@@ -134,7 +134,7 @@ select avg(pro_price), pro_com as company_id from item_mast
 group by company_id
 order by company_id asc;
 
-#25. From the following table, write a SQL query to count the number of employees in each department. Return department code and number of employees.
+#24. From the following table, write a SQL query to count the number of employees in each department. Return department code and number of employees.
 use ddl_practice;
 
 select department_id, count(employee_id) as 'no_of_employee_in_dept' from employees_2
@@ -143,6 +143,14 @@ order by department_id;
 
 
 # adiotnal queries from my experience
-# write query to find maximum purchased amount for each customer, based on salesman ID from salesman then get list of customers for salesman ID then list of orders for each customer
+# 25. write query to find maximum purchased amount for each customer, based on salesman ID from salesman then get list of customers for salesman ID then list of orders for each customer
 # return customer ID, maximum purchase amount.  hint: it should have 2 sub queries for salesman , customer table
-
+select max(purch_amt), customer_id from orders
+where customer_id in 
+(
+select distinct customer_id from customer 
+where salesman_id in (
+select distinct salesman_id from salesman)
+)
+group by customer_id
+order by customer_id asc;
