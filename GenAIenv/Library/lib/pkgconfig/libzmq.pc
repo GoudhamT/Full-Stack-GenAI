@@ -1,0 +1,12 @@
+prefix=c:/Full-Stack-GenAI/GenAIenv/Library
+exec_prefix=c:/Full-Stack-GenAI/GenAIenv/Library
+libdir=c:/Full-Stack-GenAI/GenAIenv/Library/lib
+includedir=c:/Full-Stack-GenAI/GenAIenv/Library/include
+
+Name: libzmq
+Description: 0MQ c++ library
+Version: 4.3.5
+Libs: -L${libdir} -lzmq
+Libs.private: -lstdc++ 
+Requires.private: 
+Cflags: -I${includedir} 
